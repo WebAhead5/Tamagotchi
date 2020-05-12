@@ -1,0 +1,33 @@
+import React from "react";
+import {getUserData} from '../utils/getUserData'
+import { token } from "../../token";
+import TextFilter from "./TextFilter"
+
+const UserHeader = props => {
+    const [searchText,setSearchText] = React.useState("");
+    const [userData,setUserData] = React.useState({});
+    React.useEffect(() => {
+        const username = "fridabu";
+        getUserData(`https://api.github.com/users/${username}?access_token=${token}`).then(data => setUserData(data));
+      }, []);
+
+    
+    const { avatar_url, html_url, name, followers, repos_url } = userData;
+    const handleChangeText  = event => { 
+        setSearchText(event.target.value);
+        const username = "WebAhead";
+        getUserData(`https://api.github.com/users/${username}`).then(data => setUserData(data));
+    }
+
+    return (
+        <div>
+            <TextFilter handleChangeText = {handleChangeText} />
+            <h1>Name  {name}</h1>
+            <h2>followers {followers} </h2>
+            <img src={avatar_url} width='200' height='200'></img>
+        </div>
+       
+    );
+}
+
+export default UserHeader;
