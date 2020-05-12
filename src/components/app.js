@@ -1,6 +1,6 @@
 import React from "react";
 import UserHeader from './UserHeader';
-
+import Motivation from './Motivation'
 
 export default function App() {
   const [timeToDeath, setTimeToDeath] = React.useState(30);
@@ -11,8 +11,8 @@ export default function App() {
   return (
     <main>
       <UserHeader />
-      {/* <Motivation timeToDeath={timeToDeath} />
-      <Buttons handleChangeTime={handleChangeTime} /> */}
+      <Motivation timeToDeath={timeToDeath} />
+      {/* <Buttons handleChangeTime={handleChangeTime} /> */}
     </main>
   );
 }
