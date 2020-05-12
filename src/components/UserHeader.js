@@ -6,7 +6,7 @@ const UserHeader = props => {
     const [searchText,setSearchText] = React.useState("");
     const [userData,setUserData] = React.useState({});
     React.useEffect(() => {
-        const username = "fridabu";
+        const username = "amirfahoum";
         getUserData(`https://api.github.com/users/${username}?access_token=${process.env.token}`).then(data => setUserData(data));
       }, []);
 

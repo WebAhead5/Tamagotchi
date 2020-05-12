@@ -5,7 +5,7 @@ import Repo from "./repo"
 const RepoList = props => {
     const [repos,setRepos] = React.useState([]);
     React.useEffect(() => {
-        const username = "fridabu";
+        const username = "amirfahoum";
         getUserData(`https://api.github.com/users/${username}/repos?access_token=${process.env.token}`).then(data => setRepos(data));
       }, []);
 
