@@ -1,6 +1,5 @@
 import React from "react";
 import {getUserData} from '../utils/getUserData'
-import { token } from "../../token";
 import TextFilter from "./TextFilter"
 
 const UserHeader = props => {
@@ -8,7 +7,7 @@ const UserHeader = props => {
     const [userData,setUserData] = React.useState({});
     React.useEffect(() => {
         const username = "fridabu";
-        getUserData(`https://api.github.com/users/${username}?access_token=${token}`).then(data => setUserData(data));
+        getUserData(`https://api.github.com/users/${username}?access_token=${process.env.token}`).then(data => setUserData(data));
       }, []);
 
     
