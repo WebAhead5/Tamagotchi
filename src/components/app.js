@@ -5,7 +5,7 @@ import UserHeader from './UserHeader';
 export default function App() {
   const [timeToDeath, setTimeToDeath] = React.useState(30);
   const [searchText,setSearchText] = React.useState("");
-  const handleChangeTime = event => setTimeToDeath(event.target.value);
+  const handleChangeTime = event => {console.log(timeToDeath); return setTimeToDeath((timeToDeath +5 % 30 > 30? 30:timeToDeath +5));}
   const handleChangeText  = event => setSearchText(event.target.value);
 
   return (

@@ -6,18 +6,20 @@ const UserHeader = props => {
     const [searchText,setSearchText] = React.useState("");
     const [userData,setUserData] = React.useState({});
     React.useEffect(() => {
-        const username = "fridabu";
+        const username = "fridabu"
         getUserData(`https://api.github.com/users/${username}?access_token=${process.env.token}`).then(data => setUserData(data));
       }, []);
 
     
-    const { avatar_url, html_url, name, followers, repos_url } = userData;
-    const handleChangeText  = event => { 
-        setSearchText(event.target.value);
-        const username = "WebAhead";
+    
+    const handleChangeText  = (value) => { 
+       console.log(value);
+        setSearchText(value);
+        const username = value;
         getUserData(`https://api.github.com/users/${username}`).then(data => setUserData(data));
     }
 
+    const { avatar_url, html_url, name, followers, repos_url } = userData;
     return (
         <div>
             <TextFilter handleChangeText = {handleChangeText} />
