@@ -12,7 +12,6 @@ const Motivation = props => {
         setCegaret(arr);
     }
     React.useEffect(() => {
-       
         handleCegaretChange(props.timeToDeath / 6);
 
     }, [props.timeToDeath]);

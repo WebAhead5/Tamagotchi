@@ -17,12 +17,10 @@ const UserHeader = props => {
     }
 
 
-    const { avatar_url, html_url, name, followers, repos_url } = userData;
+    const { avatar_url } = userData;
     return (
         <div>
             <TextFilter handleChangeText={handleChangeText} />
-            <h1>Name  {name}</h1>
-            <h2>followers {followers} </h2>
             <img src={avatar_url} width='200' height='200'></img>
         </div>
 
