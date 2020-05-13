@@ -1,6 +1,6 @@
 import React from "react";
 import UserHeader from './UserHeader';
-import Motivation from './Motivation'
+
 import Buttons from './Buttons';
 
 export default function App() {
@@ -21,7 +21,6 @@ export default function App() {
   return (
     <div>
       <UserHeader timeToDeath={timeToDeath}/>
-      <Motivation timeToDeath={Math.round(timeToDeath/6)} />
       <Buttons handleChangeTime={handleChangeTime} />
     </div>
   );
