@@ -28,7 +28,7 @@ export default function App() {
   return (
     <Page>
       <UserHeader />
-      <Motivation timeToDeath={timeToDeath} />
+      <Motivation timeToDeath={timeToDeath}  />
       <Buttons handleChangeTime={handleChangeTime} />
     </Page>
   );
