@@ -25,9 +25,7 @@ const Motivation = props => {
     return() => clearInterval(interval);
 
     }, []);
-    console.log(Cegaret)
-    return (
-        
+    return (  
         <div>
             <form onSubmit={(e) => { e.preventDefault(); }}>
                 <fieldset>
