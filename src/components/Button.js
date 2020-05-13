@@ -1,28 +1,34 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
 import Icon from './Icon'
 
-const WeatherCard = (props) => {
+
+
+
+const Button = (props) => {
     const red = 100;
-    const <Button></Button> = styled.div`
+    const Button = styled.button`
     margin: 0 auto;
     background: linear-gradient(to bottom,rgba(${red},200,200),pink);
-    width: 200px;
-    height: 280px;
+    width: 30px;
+    height: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     border-radius: 15px ;
     `
-    return (
-        <Card>
-            <Icon />
-        </Card>
+    function addLife() {
 
+
+    }
+
+    return (
+        <Button onClick={props.handleChangeTime}>
+            <Icon />
+        </Button>
     );
 }
 
-export default WeatherCard;
+export default Button;
 
