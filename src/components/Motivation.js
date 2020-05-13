@@ -4,7 +4,6 @@ var src1 = "/home/amir/repo01/projects/Tamagotchi/public/22220.png"
 const Motivation = props => {
     const [Cegaret, setCegaret] = React.useState([])
     const handleCegaretChange = (number) => {
-        console.log(number);
         var arr = [];
         for (let i = 0; i < number; i++) {
             arr.push("");
@@ -12,7 +11,7 @@ const Motivation = props => {
         setCegaret(arr);
     }
     React.useEffect(() => {
-        handleCegaretChange(props.timeToDeath / 6);
+        handleCegaretChange(props.timeToDeath);
 
     }, [props.timeToDeath]);
 

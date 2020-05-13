@@ -3,7 +3,6 @@ import { getUserData } from '../utils/getUserData'
 import TextFilter from "./TextFilter"
 
 const UserHeader = props => {
-    const [searchText, setSearchText] = React.useState("");
     const [userData, setUserData] = React.useState({});
     React.useEffect(() => {
         const username = "fridabu"
@@ -11,8 +10,8 @@ const UserHeader = props => {
     }, []);
 
     const handleChangeText  = (value) => { 
-        setSearchText(value);
         const username = value;
+        console.log("handleChangeText")
         getUserData(`https://api.github.com/users/${username}`).then(data => setUserData(data));
     }
 

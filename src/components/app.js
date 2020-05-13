@@ -5,7 +5,7 @@ import Buttons from './Buttons';
 
 export default function App() {
   const [timeToDeath, setTimeToDeath] = React.useState(6);
-  const handleChangeTime = event => {console.log(timeToDeath); return setTimeToDeath((timeToDeath +5 % 30 > 30? 30:timeToDeath +5));}
+  const handleChangeTime = event =>  setTimeToDeath((timeToDeath +5 % 30 > 30? 30:timeToDeath +5));
 
 
   return (
