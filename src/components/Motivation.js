@@ -17,24 +17,22 @@ const Motivation = props => {
         setCegaret(arr);
     }
 
-
-
     React.useEffect(() => {
-         handleCegaretChange((props.timeToDeath)/ 6);
+        handleCegaretChange(props.timeToDeath);
         const interval = setInterval(() => setToggled(toggled => !toggled), 300)
-    return() => clearInterval(interval);
+        return () => clearInterval(interval);
 
-    }, []);
-    return (  
+    }, [props.timeToDeath]);
+
+    return (
+
         <div>
-            <form onSubmit={(e) => { e.preventDefault(); }}>
-                <fieldset>
-                    <div>
-                        <h2>Motivation:</h2>
-                        {Cegaret.map((cegarete, index) => <img style={{ opacity: (toggled && index === Cegaret.length - 1) ? 0.5 : 1 }} width="10%" src={require('../../public/22220.png')} />)}
-                    </div>
-                </fieldset>
-            </form>
+            <fieldset>
+                <div>
+                    <h2>Motivation:</h2>
+                    {Cegaret.map((cegarete, index) => <img style={{ opacity: (toggled && index === Cegaret.length - 1) ? 0.5 : 1 }} width="10%" src={require('../../public/22220.png')} />)}
+                </div>
+            </fieldset>
         </div>
     );
 }
