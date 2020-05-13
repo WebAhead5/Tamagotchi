@@ -5,17 +5,18 @@ import Buttons from './Buttons';
 
 export default function App() {
   const [timeToDeath, setTimeToDeath] = React.useState(30);
-  const handleChangeTime = event =>  setTimeToDeath((timeToDeath +5 % 30 > 30? 30:timeToDeath +5));
-  setTimeout(()=>{
-    if(timeToDeath > 0){
-      setTimeToDeath(timeToDeath - 1);
-    }
-  },1000);
+  const handleChangeTime = event => setTimeToDeath(timeToDeath +5 % 30 > 30? 30:timeToDeath +5);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => setTimeToDeath((timeToDeath) => timeToDeath - 1), 1000)
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <div>
       <UserHeader timeToDeath={timeToDeath}/>
-      <Motivation timeToDeath={timeToDeath/6} />
+      <Motivation timeToDeath={Math.round(timeToDeath/6)} />
       <Buttons handleChangeTime={handleChangeTime} />
     </div>
   );
