@@ -12,9 +12,6 @@ const Button = (props) => {
     background: linear-gradient(to bottom,rgba(${red},200,200),pink);
     width: 30px;
     height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     border-radius: 15px ;
     `
@@ -24,8 +21,8 @@ const Button = (props) => {
     }
 
     return (
-        <Button onClick={props.handleChangeTime}>
-            <Icon />
+        <Button  onClick={props.handleChangeTime}>
+            <Icon icon={props.icon} />
         </Button>
     );
 }

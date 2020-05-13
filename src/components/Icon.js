@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import weed from '../../public/weed.png';
+import heart from '../../public/heart.jpg';
 
 const Icon = (props) => {
 
-    const Icon = styled.div`
-      width: 40%;
+  const Icon = styled.img`
+      width: 100%;
+
     `
 
-    return (
-        <Icon src="./img/clouds.png" alt="Weather Icon" />
-    );
+  return (
+    <Icon src={props.icon==="weed" ? weed : heart} alt="Weather Icon" />
+  );
 }
 
 export default Icon;
