@@ -2,11 +2,14 @@ import React from "react";
 
 const UserImage = props => {
 
-    if(!props.userData) return <img  width='200' height='200'></img>
+    if (!props.userData) return <img width='200' height='200'></img>
 
-    const {avatar_url} = props.userData;
+    const { avatar_url, name } = props.userData;
     return (
-        <img src={avatar_url} width='200' height='200'></img>
+        <div>
+            {name}
+            <img src={avatar_url} width='200' height='200'></img>
+        </div>
     );
 }
 

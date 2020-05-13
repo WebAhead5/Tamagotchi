@@ -8,6 +8,7 @@ const TextFilter = props => {
         if(text.length > 0) props.handleChangeText(text)
       }
     }
+    if(props.userData)return <div></div>
     return (
         <div>
           <form onSubmit={(e)=> {e.preventDefault();}}>
