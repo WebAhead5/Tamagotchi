@@ -6,7 +6,7 @@ import Motivation from './Motivation'
 import styled from '@emotion/styled';
 
 const UserHeader = props => {
-    const [userData, setUserData] = React.useState({});
+    const [userData, setUserData] = React.useState();
 
     const handleChangeText = (value) => {
         const username = value;
