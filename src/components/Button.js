@@ -10,9 +10,9 @@ const Button = (props) => {
     const Button = styled.button`
     margin: 0 auto;
     background: linear-gradient(to bottom,rgba(${red},200,200),pink);
-    width: 30px;
-    height: 30px;
-    align-items: center;
+    width: 35px;
+    height: 35px;
+    
     border-radius: 15px ;
     `
     function addLife() {
@@ -21,7 +21,7 @@ const Button = (props) => {
     }
 
     return (
-        <Button  onClick={props.handleChangeTime}>
+        <Button onClick={props.handleChangeTime}>
             <Icon icon={props.icon} />
         </Button>
     );

@@ -22,9 +22,9 @@ const Buttons = (props) => {
     `
     return (
         <ButoonDivCss>
-            <Button icon="heart" handleChangeTime={props.handleChangeTime}/>
-            <Button icon="weed" handleChangeTime={props.handleChangeTime}/>
-            <Button icon="heart" handleChangeTime={props.handleChangeTime}/>
+            <Button icon="love" handleChangeTime={props.handleChangeTime} />
+            <Button icon="weed" handleChangeTime={props.handleChangeTime} />
+            <Button icon="cookie" handleChangeTime={props.handleChangeTime} />
         </ButoonDivCss>
 
 
