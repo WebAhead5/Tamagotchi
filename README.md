@@ -20,7 +20,8 @@ UserHeader
 Motivation
 Buttons
 
-![Image description]()
+# design:
+![](https://github.com/WebAhead5/Tamagotchi/blob/faridsBranch/Design/design.png)
 
 
 
