@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-var src1 = '../../public/22220.png'
+var src1 = '../../public/heart11.png'
 
 const Motivation = props => {
     const [Cegaret, setCegaret] = React.useState([])
