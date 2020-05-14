@@ -8,12 +8,12 @@ const TextFilter = props => {
         if(text.length > 0) props.handleChangeText(text)
       }
     }
-    if(props.userData)return <div></div>
+    if(props.userData)return <div className="displayNon"></div>
     return (
         <div>
           <form onSubmit={(e)=> {e.preventDefault();}}>
               <div>
-                <label for="free_text">Please chosse a user</label><br/>
+                <label for="free_text">Please choose a user</label><br/>
                 <input
                   type="text"
                   id="free_text"
