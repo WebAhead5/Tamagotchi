@@ -6,9 +6,7 @@ const Motivation = props => {
     const [toggled, setToggled] = React.useState(false)
 
     const handleCegaretChange = (number) => {
-        console.log(number);
         var arr = [];
-        console.log(number);
         for (let i = 0; i < number; i++) {
             arr.push("");
         }

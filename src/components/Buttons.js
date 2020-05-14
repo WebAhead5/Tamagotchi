@@ -25,7 +25,7 @@ const Buttons = (props) => {
     if(props.timeToDeath == 0){
        click = false;
     }
-    console.log(props.timeToDeath);
+
     return (
         <ButoonDivCss>
             <Button clickable= {click} icon="love" handleChangeTime={props.handleChangeTime} />

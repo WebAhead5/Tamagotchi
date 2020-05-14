@@ -10,7 +10,6 @@ const UserHeader = props => {
 
     const handleChangeText = (value) => {
         const username = value;
-        console.log("handleChangeText")
         getUserData(`https://api.github.com/users/${username}`).then(data => setUserData(data));
     }
 
