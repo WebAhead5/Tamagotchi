@@ -25,11 +25,16 @@ const Motivation = props => {
 
     if(!props.userData)return <div></div>
 
+    var className = "motivationImagesContanier";
+    var label = "Motivation:";
+    if(props.timeToDeath === 0){
+        className = "displayNon";
+        label ="They burnt out!";
+    }
     return (
-
         <div className="motivation">
-            Motivation:
-            <div  className="motivationImagesContanier">
+            {label}
+            <div  className={className}>
                 {Cegaret.map((cegarete, index) => <img style={{opacity: (toggled && index === Cegaret.length - 1) ? 0.5 : 1 }} width="10%" src={require('../../public/22220.png')} />)}
             </div>
         </div>
