@@ -24,7 +24,7 @@ const UserHeader = props => {
         <div className='gameBody'>
             <div className="userBody">
                 <TextFilter userData={userData} handleChangeText={handleChangeText} />
-                <UserImage userData={userData} />
+                <UserImage userData={userData} timeToDeath = {Math.round(props.timeToDeath / 6)} />
                 <Motivation userData={userData} timeToDeath={Math.round(props.timeToDeath / 6)} />
             </div>
         </div>
