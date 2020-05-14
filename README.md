@@ -31,8 +31,9 @@ Buttons
 ## Usage
 
 ```React
+netlify
 
 ```
-
+ #link for the game:https://nervous-engelbart-a86d16.netlify.app/ 
 ## Testing
 For each component we create different tests to make sure that al componenets work fine.
