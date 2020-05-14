@@ -21,7 +21,7 @@ export default function App() {
   return (
     <div>
       <UserHeader timeToDeath={timeToDeath}/>
-      <Buttons handleChangeTime={handleChangeTime} />
+      <Buttons handleChangeTime={handleChangeTime} timeToDeath={Math.round(timeToDeath / 6)}/>
     </div>
   );
 }
