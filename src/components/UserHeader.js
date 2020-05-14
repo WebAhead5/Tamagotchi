@@ -22,9 +22,11 @@ const UserHeader = props => {
 
     return (
         <div className='gameBody'>
-            <TextFilter userData={userData} handleChangeText={handleChangeText} />
-            <UserImage userData={userData} />
-            <Motivation userData={userData} timeToDeath={Math.round(props.timeToDeath / 6)} />
+            <div className="userBody">
+                <TextFilter userData={userData} handleChangeText={handleChangeText} />
+                <UserImage userData={userData} />
+                <Motivation userData={userData} timeToDeath={Math.round(props.timeToDeath / 6)} />
+            </div>
         </div>
 
     );
