@@ -33,7 +33,7 @@ const Motivation = props => {
         <div className="motivation">
             {label}
             <div  className={className}>
-                {Cegaret.map((cegarete, index) => <img style={{opacity: (toggled && index === Cegaret.length - 1) ? 0.5 : 1 }} width="10%" src={require('../../public/22220.png')} />)}
+                {Cegaret.map((cegarete, index) => <img key={index} style={{opacity: (toggled && index === Cegaret.length - 1) ? 0.5 : 1 }} width="10%" src={require('../../public/22220.png')} />)}
             </div>
         </div>
     );
