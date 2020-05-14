@@ -15,13 +15,14 @@ const Button = (props) => {
     
     border-radius: 15px ;
     `
-    function addLife() {
 
-
+    var callback = props.handleChangeTime;
+    if(!props.clickable){
+        callback = ()=>{}
     }
 
     return (
-        <Button onClick={props.handleChangeTime}>
+        <Button onClick={callback}>
             <Icon icon={props.icon} />
         </Button>
     );

@@ -20,11 +20,17 @@ const Buttons = (props) => {
 
     
     `
+
+    var click = true;
+    if(props.timeToDeath == 0){
+       click = false;
+    }
+    console.log(props.timeToDeath);
     return (
         <ButoonDivCss>
-            <Button icon="love" handleChangeTime={props.handleChangeTime} />
-            <Button icon="weed" handleChangeTime={props.handleChangeTime} />
-            <Button icon="cookie" handleChangeTime={props.handleChangeTime} />
+            <Button clickable= {click} icon="love" handleChangeTime={props.handleChangeTime} />
+            <Button clickable= {true} icon="weed" handleChangeTime={props.handleChangeTime} />
+            <Button clickable= {click} icon="cookie" handleChangeTime={props.handleChangeTime} />
         </ButoonDivCss>
 
 
