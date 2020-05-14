@@ -25,11 +25,10 @@ input {
 .motivation{
   margin: 0 auto;
   background: linear-gradient(to top,rgba(200,200,200),pink);
-  width: 250px;
+  width: 220px;
   height: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
 
