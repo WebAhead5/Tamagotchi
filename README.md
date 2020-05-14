@@ -1,7 +1,8 @@
-# Tamagotchi
+### Tamagotchi
 
 A simple game that display  On  virtual Human and you had to take care of it or it would die...
-## HOW TO PLAY
+
+### HOW TO PLAY
 ```
 1) enter your user name on github,press Enter
 2) after that your username image will appear on the screen
@@ -19,6 +20,9 @@ UserHeader
 Motivation
 Buttons
 
+# design:
+![](https://github.com/WebAhead5/Tamagotchi/blob/faridsBranch/Design/design.png)
+
 
 
 
@@ -26,11 +30,11 @@ Buttons
 
 ## Usage
 
-```React
+```
+React
+netlify
 
 ```
-
+ link for the game:https://nervous-engelbart-a86d16.netlify.app/ 
 ## Testing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+For each component we create different tests to make sure that al componenets work fine.
